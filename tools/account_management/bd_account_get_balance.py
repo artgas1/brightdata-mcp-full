@@ -2,6 +2,8 @@
 
 Hand-written smoke tool for A1 scaffolding. Endpoint per official BD OpenAPI spec.
 
+# SMOKE-TOOL: hand-written, do not regenerate
+
 NOTE on permissions: this endpoint requires the API token to have the
 "customer balance" permission. With the default test token used during A1
 verification (2026-05-01), `GET /customer/balance` returns HTTP 403 with

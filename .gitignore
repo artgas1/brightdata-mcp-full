@@ -49,6 +49,7 @@ coverage.xml
 # OpenAPI specs cache (regenerated on demand)
 specs/openapi/*.yaml
 specs/openapi/*.json
+specs/openapi/llms.txt
 !specs/openapi/.gitkeep
 
 # IDE

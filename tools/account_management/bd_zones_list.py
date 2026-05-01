@@ -2,6 +2,8 @@
 
 Hand-written smoke tool for A1 scaffolding. Verified against live API
 2026-05-01 — endpoint `GET /zone/get_active_zones` returns 200.
+
+# SMOKE-TOOL: hand-written, do not regenerate
 """
 
 from __future__ import annotations
