@@ -1,7 +1,7 @@
 ---
 title: "SPEC: brightdata-mcp-full — comprehensive 350-tool MCP server"
 type: "spec"
-status: "ready-for-dev"
+status: "in-progress"
 linear_issue: "INFRA-160"
 owner: "@artgas1"
 last_updated: "2026-05-01"
@@ -405,3 +405,33 @@ Phase 3 в существующем Linear project «Миграция proxy: Spa
 - Linear Project: [Миграция proxy: SpaceProxy → Bright Data](https://linear.app/neirosova/project/migraciya-proxy-spaceproxy-bright-data-087da7e9b0a9)
 - [Bright Data $300M ARR — CTech Nov 2025](https://www.calcalistech.com/ctechnews/article/sjeyg2ezwe)
 - Discussion thread: chat session 2026-05-01 (proxy migration research)
+
+## Reality Check (added after Round 1-3 implementation)
+
+**Date:** 2026-05-01
+**Status:** v0.1-alpha — 149 tools across 15 groups (vs SPEC estimate of 350 across 16)
+
+### Discoveries
+
+1. **350 was an over-count.** The SPEC estimate of 350 came from counting documentation pages in `docs.brightdata.com/llms.txt`. The real number of unique BD REST operations across the public English OpenAPI specs (after dedup): ~218. After our `(method, path)` dedup per group (the codegen pipeline groups identical operations that appear in multiple specs): **149** tools.
+
+2. **Per-group reality vs SPEC estimate:**
+   - `proxy_manager`: **1** (not 36) — most LPM features are CLI flags, not REST endpoints. The single REST endpoint exposed is what BD actually ships publicly.
+   - `serp`: **3** (not 68) — BD exposes a single generic `/request` endpoint that takes engine as a parameter, not 68 separate engine-specific endpoints. The 68 from llms.txt counted documentation variants, not API operations.
+   - `scrapers`: **3** (not 94) — same pattern: generic trigger/snapshot, not 94 platform-specific scrapers. Per-platform scrapers are dataset IDs, not unique REST paths.
+   - `account_management`: **70** (not 44) — reseller endpoints from `openapi-reseller` spec absorbed here, expanding the group.
+   - `marketplace_dataset`: **25** (not 15) — DCA + datasets-rest-api combined.
+   - Other groups roughly tracked the estimate.
+
+3. **Endpoint URL fixes:** The original SPEC's pseudocode referenced `/api/customer/balance`. The real BD endpoint is `/customer/balance` (no `/api/` prefix). Several similar `/api/` prefix removals were applied during codegen — `lib/client.py` does not auto-prepend `/api/`.
+
+4. **`rest_api` group: 0 tools.** No OpenAPI operations mapped to this group — the endpoints we expected here all landed in `account_management` instead. Group directory kept (empty `__init__.py`) for future spec additions.
+
+5. **Number of OpenAPI specs: 19, not 31.** The original SPEC claim of "31 OpenAPI specs" came from counting all spec-like URLs in `llms.txt`. After dedup and filtering to actual ingestible OpenAPI documents, A2's pipeline pulled 19 unique specs.
+
+### Adjustments to next steps
+
+- **INFRA-166** (`.mcp.json` registration) unchanged in scope — works the same regardless of tool count.
+- **v1.1** is now positioned as hand-wraps for popular per-platform scrapers (community-driven, not from OpenAPI). Original spec assumed these were auto-generatable; reality is they need bespoke wrappers because BD doesn't ship per-platform OpenAPI specs.
+- **Acceptance Criteria** count assertions (`44 account tools`, `91 tools across 3 groups`, etc.) need to be updated to reflect actual numbers (`70`, `85` respectively) — see follow-up edit if AC is consumed by automation.
+- **Reality-checked README** and per-group docs ship in the A4 docs PR (this section).
