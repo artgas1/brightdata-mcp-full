@@ -39,6 +39,7 @@ asyncio_mode = "auto"
 testpaths = ["tests"]
 markers = [
     "integration: integration tests requiring live BD API",
+    "no_token: integration test that does not require a BD token (structural/import test)",
 ]
 
 [tool.ruff]
