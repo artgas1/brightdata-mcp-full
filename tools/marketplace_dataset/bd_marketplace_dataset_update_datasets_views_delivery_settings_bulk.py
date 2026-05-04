@@ -20,7 +20,9 @@ WRITES = True
 
 
 @requires_write_enabled
-async def bd_marketplace_dataset_update_datasets_views_delivery_settings_bulk(body: dict[str, Any] | None = None) -> dict[str, Any]:
+async def bd_marketplace_dataset_update_datasets_views_delivery_settings_bulk(
+    body: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     """Updates delivery configurations for multiple dataset views in a single request. All listed views receive the same configuration. Returns the ids of the updated views.
 
     From: PUT /datasets/views/delivery_settings/bulk

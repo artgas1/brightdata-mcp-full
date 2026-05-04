@@ -12,8 +12,12 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING
 
-from .bd_scraping_shield_get_shield_domains_by_class import bd_scraping_shield_get_shield_domains_by_class
-from .bd_scraping_shield_get_shield_zones_by_class import bd_scraping_shield_get_shield_zones_by_class
+from .bd_scraping_shield_get_shield_domains_by_class import (
+    bd_scraping_shield_get_shield_domains_by_class,
+)
+from .bd_scraping_shield_get_shield_zones_by_class import (
+    bd_scraping_shield_get_shield_zones_by_class,
+)
 from .bd_scraping_shield_list_shield_class import bd_scraping_shield_list_shield_class
 from .bd_scraping_shield_list_shield_samples import bd_scraping_shield_list_shield_samples
 

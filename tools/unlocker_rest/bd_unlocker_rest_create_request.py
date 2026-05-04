@@ -20,7 +20,9 @@ WRITES = True
 
 
 @requires_write_enabled
-async def bd_unlocker_rest_create_request(async_arg: bool | None = None, body: dict[str, Any] | None = None) -> dict[str, Any]:
+async def bd_unlocker_rest_create_request(
+    async_arg: bool | None = None, body: dict[str, Any] | None = None
+) -> dict[str, Any]:
     """Call POST /request.
 
     From: POST /request

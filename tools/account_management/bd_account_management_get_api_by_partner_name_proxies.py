@@ -18,7 +18,18 @@ GROUP = "account_management"
 WRITES = False
 
 
-async def bd_account_management_get_api_by_partner_name_proxies(partner_name: str, id: str, zone: str | None = None, country: str | None = None, state: str | None = None, session: float | None = None, asn: str | None = None, carrier: str | None = None, const: float | None = None, split: float | None = None) -> dict[str, Any]:
+async def bd_account_management_get_api_by_partner_name_proxies(
+    partner_name: str,
+    id: str,
+    zone: str | None = None,
+    country: str | None = None,
+    state: str | None = None,
+    session: float | None = None,
+    asn: str | None = None,
+    carrier: str | None = None,
+    const: float | None = None,
+    split: float | None = None,
+) -> dict[str, Any]:
     """Call GET /api/{PARTNER_NAME}/proxies.
 
     From: GET /api/{PARTNER_NAME}/proxies

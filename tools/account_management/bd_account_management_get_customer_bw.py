@@ -18,7 +18,9 @@ GROUP = "account_management"
 WRITES = False
 
 
-async def bd_account_management_get_customer_bw(from_arg: str | None = None, to: str | None = None) -> dict[str, Any]:
+async def bd_account_management_get_customer_bw(
+    from_arg: str | None = None, to: str | None = None
+) -> dict[str, Any]:
     """Get the bandwidth stats for all your Zones
 
     From: GET /customer/bw

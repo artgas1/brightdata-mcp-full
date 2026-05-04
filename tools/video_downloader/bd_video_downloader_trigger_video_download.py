@@ -20,7 +20,9 @@ WRITES = True
 
 
 @requires_write_enabled
-async def bd_video_downloader_trigger_video_download(collector: str, body: dict[str, Any] | None = None) -> dict[str, Any]:
+async def bd_video_downloader_trigger_video_download(
+    collector: str, body: dict[str, Any] | None = None
+) -> dict[str, Any]:
     """Trigger a video download job
 
     Submits one or more video download jobs. Results are delivered to your configured

@@ -20,7 +20,9 @@ WRITES = True
 
 
 @requires_write_enabled
-async def bd_marketplace_dataset_create_datasets_snapshots_by_id_deliver(id: str, body: dict[str, Any] | None = None) -> dict[str, Any]:
+async def bd_marketplace_dataset_create_datasets_snapshots_by_id_deliver(
+    id: str, body: dict[str, Any] | None = None
+) -> dict[str, Any]:
     """Deliver the dataset snapshot
 
     From: POST /datasets/snapshots/{id}/deliver

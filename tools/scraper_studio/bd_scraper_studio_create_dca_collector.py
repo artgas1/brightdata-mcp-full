@@ -20,7 +20,9 @@ WRITES = True
 
 
 @requires_write_enabled
-async def bd_scraper_studio_create_dca_collector(body: dict[str, Any] | None = None) -> dict[str, Any]:
+async def bd_scraper_studio_create_dca_collector(
+    body: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     """Create Scraper Template
 
     Creates a Scraper Studio scraper with a sample template.

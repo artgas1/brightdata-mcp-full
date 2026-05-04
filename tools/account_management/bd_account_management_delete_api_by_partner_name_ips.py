@@ -20,7 +20,9 @@ WRITES = True
 
 
 @requires_write_enabled
-async def bd_account_management_delete_api_by_partner_name_ips(partner_name: str, id: str, zone: str | None = None) -> dict[str, Any]:
+async def bd_account_management_delete_api_by_partner_name_ips(
+    partner_name: str, id: str, zone: str | None = None
+) -> dict[str, Any]:
     """Call DELETE /api/{PARTNER_NAME}/ips.
 
     From: DELETE /api/{PARTNER_NAME}/ips

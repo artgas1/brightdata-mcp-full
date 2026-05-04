@@ -20,7 +20,13 @@ WRITES = True
 
 
 @requires_write_enabled
-async def bd_account_management_update_api_by_partner_name_ips(partner_name: str, id: str, count: int, zone: str | None = None, body: dict[str, Any] | None = None) -> dict[str, Any]:
+async def bd_account_management_update_api_by_partner_name_ips(
+    partner_name: str,
+    id: str,
+    count: int,
+    zone: str | None = None,
+    body: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     """Call PUT /api/{PARTNER_NAME}/ips.
 
     From: PUT /api/{PARTNER_NAME}/ips

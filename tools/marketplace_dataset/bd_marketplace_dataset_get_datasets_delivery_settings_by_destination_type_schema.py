@@ -18,7 +18,9 @@ GROUP = "marketplace_dataset"
 WRITES = False
 
 
-async def bd_marketplace_dataset_get_datasets_delivery_settings_by_destination_type_schema(destination_type: str) -> dict[str, Any]:
+async def bd_marketplace_dataset_get_datasets_delivery_settings_by_destination_type_schema(
+    destination_type: str,
+) -> dict[str, Any]:
     """Returns the exact fields required for a specific delivery destination type (for example `s3`, `sftp`, `gcs`, `webhook`). Use this to discover which credentials and parameters must be supplied when upd
 
     Returns the exact fields required for a specific delivery destination type (for example

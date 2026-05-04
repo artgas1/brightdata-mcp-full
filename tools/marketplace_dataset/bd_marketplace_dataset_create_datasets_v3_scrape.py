@@ -20,7 +20,13 @@ WRITES = True
 
 
 @requires_write_enabled
-async def bd_marketplace_dataset_create_datasets_v3_scrape(dataset_id: str, custom_output_fields: str | None = None, include_errors: bool | None = None, format: str | None = None, body: dict[str, Any] | None = None) -> dict[str, Any]:
+async def bd_marketplace_dataset_create_datasets_v3_scrape(
+    dataset_id: str,
+    custom_output_fields: str | None = None,
+    include_errors: bool | None = None,
+    format: str | None = None,
+    body: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     """Scrape data and return it directly in the response.
 
     This endpoint allows users to fetch data efficiently and ensures seamless integration

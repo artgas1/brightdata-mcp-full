@@ -20,7 +20,9 @@ WRITES = True
 
 
 @requires_write_enabled
-async def bd_scraper_studio_create_dca_trigger_hp(collector: str, body: dict[str, Any] | None = None) -> dict[str, Any]:
+async def bd_scraper_studio_create_dca_trigger_hp(
+    collector: str, body: dict[str, Any] | None = None
+) -> dict[str, Any]:
     """Trigger a scraper for batch collection method
 
     Triggers an HP batch scraper job and returns a job ID that can be used to track

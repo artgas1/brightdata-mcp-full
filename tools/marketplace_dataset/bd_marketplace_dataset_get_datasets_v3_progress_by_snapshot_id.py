@@ -18,7 +18,9 @@ GROUP = "marketplace_dataset"
 WRITES = False
 
 
-async def bd_marketplace_dataset_get_datasets_v3_progress_by_snapshot_id(snapshot_id: str) -> dict[str, Any]:
+async def bd_marketplace_dataset_get_datasets_v3_progress_by_snapshot_id(
+    snapshot_id: str,
+) -> dict[str, Any]:
     """The Monitor Progress API is designed to track the current status of a data collection job, also known as a snapshot, indicating whether it is collecting data, processing it, or ready for download.
 
     From: GET /datasets/v3/progress/{snapshot_id}

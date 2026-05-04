@@ -20,7 +20,9 @@ WRITES = True
 
 
 @requires_write_enabled
-async def bd_account_management_create_api_by_partner_name_signup_residential(partner_name: str, body: dict[str, Any] | None = None) -> dict[str, Any]:
+async def bd_account_management_create_api_by_partner_name_signup_residential(
+    partner_name: str, body: dict[str, Any] | None = None
+) -> dict[str, Any]:
     """Call POST /api/{PARTNER_NAME}/signup_residential.
 
     From: POST /api/{PARTNER_NAME}/signup_residential

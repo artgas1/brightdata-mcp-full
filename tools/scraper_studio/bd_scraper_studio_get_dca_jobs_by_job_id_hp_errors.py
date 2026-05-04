@@ -18,7 +18,9 @@ GROUP = "scraper_studio"
 WRITES = False
 
 
-async def bd_scraper_studio_get_dca_jobs_by_job_id_hp_errors(job_id: str, skip_normalize: bool | None = None) -> dict[str, Any]:
+async def bd_scraper_studio_get_dca_jobs_by_job_id_hp_errors(
+    job_id: str, skip_normalize: bool | None = None
+) -> dict[str, Any]:
     """Get errors for an job
 
     Retrieves a list of errors generated during execution of an batch scraper job. The job

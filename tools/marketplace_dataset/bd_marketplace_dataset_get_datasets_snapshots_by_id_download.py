@@ -18,7 +18,13 @@ GROUP = "marketplace_dataset"
 WRITES = False
 
 
-async def bd_marketplace_dataset_get_datasets_snapshots_by_id_download(id: str, format: str | None = None, compress: bool | None = None, batch_size: int | None = None, part: int | None = None) -> dict[str, Any]:
+async def bd_marketplace_dataset_get_datasets_snapshots_by_id_download(
+    id: str,
+    format: str | None = None,
+    compress: bool | None = None,
+    batch_size: int | None = None,
+    part: int | None = None,
+) -> dict[str, Any]:
     """Get dataset snapshot content
 
     From: GET /datasets/snapshots/{id}/download

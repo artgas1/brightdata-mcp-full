@@ -18,7 +18,13 @@ GROUP = "scrapers"
 WRITES = False
 
 
-async def bd_scrapers_get_datasets_v3_snapshot_by_snapshot_id(snapshot_id: str, format: str | None = None, compress: bool | None = None, batch_size: int | None = None, part: int | None = None) -> dict[str, Any]:
+async def bd_scrapers_get_datasets_v3_snapshot_by_snapshot_id(
+    snapshot_id: str,
+    format: str | None = None,
+    compress: bool | None = None,
+    batch_size: int | None = None,
+    part: int | None = None,
+) -> dict[str, Any]:
     """Download the snapshot content
 
     From: GET /datasets/v3/snapshot/{snapshot_id}

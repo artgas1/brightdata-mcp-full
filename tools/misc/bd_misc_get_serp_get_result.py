@@ -18,7 +18,9 @@ GROUP = "misc"
 WRITES = False
 
 
-async def bd_misc_get_serp_get_result(response_id: str, zone: str | None = None, customer: str | None = None) -> dict[str, Any]:
+async def bd_misc_get_serp_get_result(
+    response_id: str, zone: str | None = None, customer: str | None = None
+) -> dict[str, Any]:
     """Call GET /serp/get_result.
 
     From: GET /serp/get_result

@@ -18,7 +18,12 @@ GROUP = "marketplace_dataset"
 WRITES = False
 
 
-async def bd_marketplace_dataset_get_datasets_v3_snapshot_by_snapshot_id_parts(snapshot_id: str, format: str | None = None, compress: bool | None = None, batch_size: int | None = None) -> dict[str, Any]:
+async def bd_marketplace_dataset_get_datasets_v3_snapshot_by_snapshot_id_parts(
+    snapshot_id: str,
+    format: str | None = None,
+    compress: bool | None = None,
+    batch_size: int | None = None,
+) -> dict[str, Any]:
     """When requesting a delivery in batches (see available delivery APIs) use this endpoint to check how many parts were created. format, compress and batch_size should exactly match what was sent to the de
 
     When requesting a delivery in batches (see available delivery APIs) use this endpoint to

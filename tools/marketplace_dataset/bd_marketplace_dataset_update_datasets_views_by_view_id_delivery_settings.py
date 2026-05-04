@@ -20,7 +20,9 @@ WRITES = True
 
 
 @requires_write_enabled
-async def bd_marketplace_dataset_update_datasets_views_by_view_id_delivery_settings(view_id: str, body: dict[str, Any] | None = None) -> dict[str, Any]:
+async def bd_marketplace_dataset_update_datasets_views_by_view_id_delivery_settings(
+    view_id: str, body: dict[str, Any] | None = None
+) -> dict[str, Any]:
     """Updates the delivery configuration for a specific dataset view. Returns the id of the updated view.
 
     From: PUT /datasets/views/{view_id}/delivery_settings

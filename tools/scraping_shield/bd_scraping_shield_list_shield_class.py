@@ -18,7 +18,13 @@ GROUP = "scraping_shield"
 WRITES = False
 
 
-async def bd_scraping_shield_list_shield_class(from_arg: str | None = None, to: str | None = None, cn: str | None = None, peer_cn: str | None = None, categories: str | None = None) -> dict[str, Any]:
+async def bd_scraping_shield_list_shield_class(
+    from_arg: str | None = None,
+    to: str | None = None,
+    cn: str | None = None,
+    peer_cn: str | None = None,
+    categories: str | None = None,
+) -> dict[str, Any]:
     """Get all classification data
 
     From: GET /shield/class

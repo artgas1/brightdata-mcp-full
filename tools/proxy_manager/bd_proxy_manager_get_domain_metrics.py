@@ -18,7 +18,9 @@ GROUP = "proxy_manager"
 WRITES = False
 
 
-async def bd_proxy_manager_get_domain_metrics(metric: str, from_arg: str, to: str, zones: str | None = None) -> dict[str, Any]:
+async def bd_proxy_manager_get_domain_metrics(
+    metric: str, from_arg: str, to: str, zones: str | None = None
+) -> dict[str, Any]:
     """Domain usage metrics
 
     Returns domain usage metrics from Bright Data. Supported metrics: bw (Bandwidth

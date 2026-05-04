@@ -20,7 +20,13 @@ WRITES = True
 
 
 @requires_write_enabled
-async def bd_scraper_studio_create_dca_crawl(collector: str, timeout: str, version: str | None = None, name: str | None = None, body: dict[str, Any] | None = None) -> dict[str, Any]:
+async def bd_scraper_studio_create_dca_crawl(
+    collector: str,
+    timeout: str,
+    version: str | None = None,
+    name: str | None = None,
+    body: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     """Trigger a scraper for batch collection method
 
     From: POST /dca/crawl

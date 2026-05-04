@@ -18,7 +18,9 @@ GROUP = "marketplace_dataset"
 WRITES = False
 
 
-async def bd_marketplace_dataset_get_datasets_v3_snapshot_by_snapshot_id_input(snapshot_id: str) -> dict[str, Any]:
+async def bd_marketplace_dataset_get_datasets_v3_snapshot_by_snapshot_id_input(
+    snapshot_id: str,
+) -> dict[str, Any]:
     """Get the inputs that were used to trigger the collection
 
     From: GET /datasets/v3/snapshot/{snapshot_id}/input

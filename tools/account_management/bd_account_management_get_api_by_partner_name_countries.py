@@ -18,7 +18,9 @@ GROUP = "account_management"
 WRITES = False
 
 
-async def bd_account_management_get_api_by_partner_name_countries(partner_name: str, type: str, more_than: float | None = None, mode: str | None = None) -> dict[str, Any]:
+async def bd_account_management_get_api_by_partner_name_countries(
+    partner_name: str, type: str, more_than: float | None = None, mode: str | None = None
+) -> dict[str, Any]:
     """Call GET /api/{PARTNER_NAME}/countries.
 
     From: GET /api/{PARTNER_NAME}/countries

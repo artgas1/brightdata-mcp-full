@@ -18,7 +18,9 @@ GROUP = "account_management"
 WRITES = False
 
 
-async def bd_account_management_get_network_status_by_network_type(network_type: str) -> dict[str, Any]:
+async def bd_account_management_get_network_status_by_network_type(
+    network_type: str,
+) -> dict[str, Any]:
     """Call GET /network_status/{NETWORK_TYPE}.
 
     From: GET /network_status/{NETWORK_TYPE}

@@ -18,7 +18,9 @@ GROUP = "marketplace_dataset"
 WRITES = False
 
 
-async def bd_marketplace_dataset_get_datasets_v3_delivery_by_delivery_id(delivery_id: str) -> dict[str, Any]:
+async def bd_marketplace_dataset_get_datasets_v3_delivery_by_delivery_id(
+    delivery_id: str,
+) -> dict[str, Any]:
     """The call returns the delivery status
 
     From: GET /datasets/v3/delivery/{delivery_id}

@@ -20,7 +20,9 @@ WRITES = True
 
 
 @requires_write_enabled
-async def bd_marketplace_dataset_create_datasets_v3_deliver_by_snapshot_id(snapshot_id: str, notify: str | None = None, body: dict[str, Any] | None = None) -> dict[str, Any]:
+async def bd_marketplace_dataset_create_datasets_v3_deliver_by_snapshot_id(
+    snapshot_id: str, notify: str | None = None, body: dict[str, Any] | None = None
+) -> dict[str, Any]:
     """Deliver the snapshot content to the specified storage
 
     From: POST /datasets/v3/deliver/{snapshot_id}

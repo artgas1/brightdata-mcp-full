@@ -18,7 +18,14 @@ GROUP = "unlocker_rest"
 WRITES = False
 
 
-async def bd_unlocker_rest_get_request(zone: str, url: str, format: str, method: str | None = None, country: str | None = None, data_format: str | None = None) -> dict[str, Any]:
+async def bd_unlocker_rest_get_request(
+    zone: str,
+    url: str,
+    format: str,
+    method: str | None = None,
+    country: str | None = None,
+    data_format: str | None = None,
+) -> dict[str, Any]:
     """Call GET /request.
 
     From: GET /request

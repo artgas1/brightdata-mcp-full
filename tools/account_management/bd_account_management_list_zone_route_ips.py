@@ -18,7 +18,9 @@ GROUP = "account_management"
 WRITES = False
 
 
-async def bd_account_management_list_zone_route_ips(zone: str, country: str | None = None, list_countries: bool | None = None) -> dict[str, Any]:
+async def bd_account_management_list_zone_route_ips(
+    zone: str, country: str | None = None, list_countries: bool | None = None
+) -> dict[str, Any]:
     """Get the available Data center/ISP IPs per Zone
 
     From: GET /zone/route_ips

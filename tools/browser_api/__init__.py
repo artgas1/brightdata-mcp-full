@@ -12,7 +12,9 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING
 
-from .bd_browser_api_get_browser_sessions_by_session_id import bd_browser_api_get_browser_sessions_by_session_id
+from .bd_browser_api_get_browser_sessions_by_session_id import (
+    bd_browser_api_get_browser_sessions_by_session_id,
+)
 from .bd_browser_api_list_browser_sessions import bd_browser_api_list_browser_sessions
 
 if TYPE_CHECKING:

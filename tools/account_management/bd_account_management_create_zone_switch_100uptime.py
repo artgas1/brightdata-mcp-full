@@ -20,7 +20,9 @@ WRITES = True
 
 
 @requires_write_enabled
-async def bd_account_management_create_zone_switch_100uptime(body: dict[str, Any] | None = None) -> dict[str, Any]:
+async def bd_account_management_create_zone_switch_100uptime(
+    body: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     """Switch automatic failover ON/OFF in a Static zone
 
     From: POST /zone/switch_100uptime

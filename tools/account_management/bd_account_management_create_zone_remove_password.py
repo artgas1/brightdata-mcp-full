@@ -20,7 +20,9 @@ WRITES = True
 
 
 @requires_write_enabled
-async def bd_account_management_create_zone_remove_password(body: dict[str, Any] | None = None) -> dict[str, Any]:
+async def bd_account_management_create_zone_remove_password(
+    body: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     """Remove Zone Password
 
     Remove one or more passwords from a zone. At least one password must remain on the zone

@@ -20,7 +20,9 @@ WRITES = True
 
 
 @requires_write_enabled
-async def bd_misc_create_datasets_filter(dataset_id: str, records_limit: int | None = None, body: dict[str, Any] | None = None) -> dict[str, Any]:
+async def bd_misc_create_datasets_filter(
+    dataset_id: str, records_limit: int | None = None, body: dict[str, Any] | None = None
+) -> dict[str, Any]:
     """Create a dataset snapshot based on a provided filter
 
     From: POST /datasets/filter

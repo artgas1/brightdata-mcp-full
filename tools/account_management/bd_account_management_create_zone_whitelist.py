@@ -20,7 +20,9 @@ WRITES = True
 
 
 @requires_write_enabled
-async def bd_account_management_create_zone_whitelist(body: dict[str, Any] | None = None) -> dict[str, Any]:
+async def bd_account_management_create_zone_whitelist(
+    body: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     """Add IP to zone's allowlist
 
     From: POST /zone/whitelist

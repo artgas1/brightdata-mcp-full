@@ -20,7 +20,9 @@ WRITES = True
 
 
 @requires_write_enabled
-async def bd_account_management_update_api_by_partner_name_enable_customer(partner_name: str, id: str) -> dict[str, Any]:
+async def bd_account_management_update_api_by_partner_name_enable_customer(
+    partner_name: str, id: str
+) -> dict[str, Any]:
     """Call PUT /api/{PARTNER_NAME}/enable_customer.
 
     From: PUT /api/{PARTNER_NAME}/enable_customer

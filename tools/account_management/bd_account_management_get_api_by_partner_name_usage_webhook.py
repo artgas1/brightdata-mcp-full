@@ -18,7 +18,9 @@ GROUP = "account_management"
 WRITES = False
 
 
-async def bd_account_management_get_api_by_partner_name_usage_webhook(partner_name: str, id: str, zone: str | None = None) -> dict[str, Any]:
+async def bd_account_management_get_api_by_partner_name_usage_webhook(
+    partner_name: str, id: str, zone: str | None = None
+) -> dict[str, Any]:
     """Call GET /api/{PARTNER_NAME}/usage_webhook.
 
     From: GET /api/{PARTNER_NAME}/usage_webhook

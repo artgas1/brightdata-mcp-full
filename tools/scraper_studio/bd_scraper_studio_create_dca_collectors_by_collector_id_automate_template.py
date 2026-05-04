@@ -20,7 +20,9 @@ WRITES = True
 
 
 @requires_write_enabled
-async def bd_scraper_studio_create_dca_collectors_by_collector_id_automate_template(collector_id: str, body: dict[str, Any] | None = None) -> dict[str, Any]:
+async def bd_scraper_studio_create_dca_collectors_by_collector_id_automate_template(
+    collector_id: str, body: dict[str, Any] | None = None
+) -> dict[str, Any]:
     """Trigger AI Flow
 
     Triggers AI flow to generate working scraper code.

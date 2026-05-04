@@ -20,7 +20,9 @@ WRITES = True
 
 
 @requires_write_enabled
-async def bd_marketplace_dataset_create_datasets_v3_snapshot_by_snapshot_id_rerun(snapshot_id: str) -> dict[str, Any]:
+async def bd_marketplace_dataset_create_datasets_v3_snapshot_by_snapshot_id_rerun(
+    snapshot_id: str,
+) -> dict[str, Any]:
     """Rerun previously created snapshot
 
     From: POST /datasets/v3/snapshot/{snapshot_id}/rerun

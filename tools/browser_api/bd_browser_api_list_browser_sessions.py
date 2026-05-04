@@ -18,7 +18,18 @@ GROUP = "browser_api"
 WRITES = False
 
 
-async def bd_browser_api_list_browser_sessions(api_name: str | None = None, limit: int | None = None, offset: int | None = None, status: str | None = None, start_date: str | None = None, end_date: str | None = None, target_url: str | None = None, end_url: str | None = None, sort: str | None = None, order: str | None = None) -> dict[str, Any]:
+async def bd_browser_api_list_browser_sessions(
+    api_name: str | None = None,
+    limit: int | None = None,
+    offset: int | None = None,
+    status: str | None = None,
+    start_date: str | None = None,
+    end_date: str | None = None,
+    target_url: str | None = None,
+    end_url: str | None = None,
+    sort: str | None = None,
+    order: str | None = None,
+) -> dict[str, Any]:
     """List browser sessions
 
     Retrieve a list of browser sessions with filtering and pagination.

@@ -38,9 +38,9 @@ def first_docstring_line(py_file: Path) -> str:
         # Strip leading "bd_xxx — " prefix
         stem = py_file.stem
         if line.startswith(f"{stem} —"):
-            line = line[len(f"{stem} —"):].strip()
+            line = line[len(f"{stem} —") :].strip()
         elif line.startswith(f"{stem} -"):
-            line = line[len(f"{stem} -"):].strip()
+            line = line[len(f"{stem} -") :].strip()
         return line
     return "(no docstring)"
 

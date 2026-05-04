@@ -18,7 +18,9 @@ GROUP = "account_management"
 WRITES = False
 
 
-async def bd_account_management_get_api_by_partner_name_get_asn(partner_name: str) -> dict[str, Any]:
+async def bd_account_management_get_api_by_partner_name_get_asn(
+    partner_name: str,
+) -> dict[str, Any]:
     """Call GET /api/{PARTNER_NAME}/get_asn.
 
     From: GET /api/{PARTNER_NAME}/get_asn

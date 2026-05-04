@@ -18,7 +18,9 @@ GROUP = "account_management"
 WRITES = False
 
 
-async def bd_account_management_get_zone_proxies_pending_replacement(zone: str | None = None) -> dict[str, Any]:
+async def bd_account_management_get_zone_proxies_pending_replacement(
+    zone: str | None = None,
+) -> dict[str, Any]:
     """Get list of all proxies in the provided zone, which are pending replacement
 
     From: GET /zone/proxies_pending_replacement

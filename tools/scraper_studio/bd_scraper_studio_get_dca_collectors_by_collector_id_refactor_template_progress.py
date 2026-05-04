@@ -18,7 +18,9 @@ GROUP = "scraper_studio"
 WRITES = False
 
 
-async def bd_scraper_studio_get_dca_collectors_by_collector_id_refactor_template_progress(collector_id: str) -> dict[str, Any]:
+async def bd_scraper_studio_get_dca_collectors_by_collector_id_refactor_template_progress(
+    collector_id: str,
+) -> dict[str, Any]:
     """Get Self-Healing Job Progress
 
     From: GET /dca/collectors/{collector_id}/refactor_template/progress

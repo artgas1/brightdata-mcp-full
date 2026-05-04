@@ -20,7 +20,21 @@ WRITES = True
 
 
 @requires_write_enabled
-async def bd_marketplace_dataset_create_datasets_v3_trigger(dataset_id: str, custom_output_fields: str | None = None, type: str | None = None, discover_by: str | None = None, include_errors: bool | None = None, limit_per_input: float | None = None, limit_multiple_results: float | None = None, notify: str | None = None, endpoint: str | None = None, format: str | None = None, auth_header: str | None = None, uncompressed_webhook: bool | None = None, body: dict[str, Any] | None = None) -> dict[str, Any]:
+async def bd_marketplace_dataset_create_datasets_v3_trigger(
+    dataset_id: str,
+    custom_output_fields: str | None = None,
+    type: str | None = None,
+    discover_by: str | None = None,
+    include_errors: bool | None = None,
+    limit_per_input: float | None = None,
+    limit_multiple_results: float | None = None,
+    notify: str | None = None,
+    endpoint: str | None = None,
+    format: str | None = None,
+    auth_header: str | None = None,
+    uncompressed_webhook: bool | None = None,
+    body: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     """Scrape the target website based on the inputs provided in body
 
     From: POST /datasets/v3/trigger

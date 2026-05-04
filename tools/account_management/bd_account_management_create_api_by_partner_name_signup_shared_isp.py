@@ -20,7 +20,9 @@ WRITES = True
 
 
 @requires_write_enabled
-async def bd_account_management_create_api_by_partner_name_signup_shared_isp(partner_name: str, zone: str | None = None) -> dict[str, Any]:
+async def bd_account_management_create_api_by_partner_name_signup_shared_isp(
+    partner_name: str, zone: str | None = None
+) -> dict[str, Any]:
     """Call POST /api/{PARTNER_NAME}/signup_shared_isp.
 
     From: POST /api/{PARTNER_NAME}/signup_shared_isp
