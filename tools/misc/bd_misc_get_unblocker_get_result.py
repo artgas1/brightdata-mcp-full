@@ -18,7 +18,9 @@ GROUP = "misc"
 WRITES = False
 
 
-async def bd_misc_get_unblocker_get_result(response_id: str, zone: str | None = None, customer: str | None = None) -> dict[str, Any]:
+async def bd_misc_get_unblocker_get_result(
+    response_id: str, zone: str | None = None, customer: str | None = None
+) -> dict[str, Any]:
     """Call GET /unblocker/get_result.
 
     From: GET /unblocker/get_result

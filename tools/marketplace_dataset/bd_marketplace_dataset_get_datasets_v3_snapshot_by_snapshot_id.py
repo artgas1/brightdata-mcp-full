@@ -18,7 +18,13 @@ GROUP = "marketplace_dataset"
 WRITES = False
 
 
-async def bd_marketplace_dataset_get_datasets_v3_snapshot_by_snapshot_id(snapshot_id: str, format: str | None = None, compress: bool | None = None, batch_size: int | None = None, part: int | None = None) -> dict[str, Any]:
+async def bd_marketplace_dataset_get_datasets_v3_snapshot_by_snapshot_id(
+    snapshot_id: str,
+    format: str | None = None,
+    compress: bool | None = None,
+    batch_size: int | None = None,
+    part: int | None = None,
+) -> dict[str, Any]:
     """Download the snapshot content. This endpoint allows you to retrieve the collected dataset once the snapshot status is `ready`. Data can be downloaded in multiple formats and optionally split into batc
 
     Download the snapshot content. This endpoint allows you to retrieve the collected

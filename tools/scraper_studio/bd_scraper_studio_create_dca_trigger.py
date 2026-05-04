@@ -20,7 +20,17 @@ WRITES = True
 
 
 @requires_write_enabled
-async def bd_scraper_studio_create_dca_trigger(collector: str, version: str | None = None, name: str | None = None, queue_next: int | None = None, queue: str | None = None, confirm_cancel: int | None = None, no_downloads: int | None = None, deadline: str | None = None, body: dict[str, Any] | None = None) -> dict[str, Any]:
+async def bd_scraper_studio_create_dca_trigger(
+    collector: str,
+    version: str | None = None,
+    name: str | None = None,
+    queue_next: int | None = None,
+    queue: str | None = None,
+    confirm_cancel: int | None = None,
+    no_downloads: int | None = None,
+    deadline: str | None = None,
+    body: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     """Trigger a scraper for batch collection method
 
     From: POST /dca/trigger

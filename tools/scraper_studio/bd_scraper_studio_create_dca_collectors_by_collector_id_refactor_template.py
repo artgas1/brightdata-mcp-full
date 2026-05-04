@@ -20,7 +20,9 @@ WRITES = True
 
 
 @requires_write_enabled
-async def bd_scraper_studio_create_dca_collectors_by_collector_id_refactor_template(collector_id: str, body: dict[str, Any] | None = None) -> dict[str, Any]:
+async def bd_scraper_studio_create_dca_collectors_by_collector_id_refactor_template(
+    collector_id: str, body: dict[str, Any] | None = None
+) -> dict[str, Any]:
     """Trigger Self-Healing
 
     Triggers the self-healing tool to refactor the scraper template.

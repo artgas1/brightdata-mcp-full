@@ -65,9 +65,9 @@ def test_group_tool_count(group: str) -> None:
     module = importlib.import_module(f"tools.{group}")
     exported = [name for name in module.__all__ if name != "register_tools"]
     expected_min = EXPECTED_MIN_TOOL_COUNTS[group]
-    assert (
-        len(exported) >= expected_min
-    ), f"{group} exports {len(exported)} tools, expected >= {expected_min}"
+    assert len(exported) >= expected_min, (
+        f"{group} exports {len(exported)} tools, expected >= {expected_min}"
+    )
 
 
 @pytest.mark.no_token

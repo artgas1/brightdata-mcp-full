@@ -20,7 +20,9 @@ WRITES = True
 
 
 @requires_write_enabled
-async def bd_deep_lookup_create_request_by_id_enrich(id: str, body: dict[str, Any] | None = None) -> dict[str, Any]:
+async def bd_deep_lookup_create_request_by_id_enrich(
+    id: str, body: dict[str, Any] | None = None
+) -> dict[str, Any]:
     """Enrich Column
 
     Add additional data columns to existing results.

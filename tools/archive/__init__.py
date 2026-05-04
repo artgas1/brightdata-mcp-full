@@ -15,7 +15,9 @@ from typing import TYPE_CHECKING
 from .bd_archive_create_webarchive_dump import bd_archive_create_webarchive_dump
 from .bd_archive_create_webarchive_search import bd_archive_create_webarchive_search
 from .bd_archive_get_webarchive_dump_by_dump_id import bd_archive_get_webarchive_dump_by_dump_id
-from .bd_archive_get_webarchive_search_by_search_id import bd_archive_get_webarchive_search_by_search_id
+from .bd_archive_get_webarchive_search_by_search_id import (
+    bd_archive_get_webarchive_search_by_search_id,
+)
 from .bd_archive_list_webarchive_dumps import bd_archive_list_webarchive_dumps
 from .bd_archive_list_webarchive_searches import bd_archive_list_webarchive_searches
 

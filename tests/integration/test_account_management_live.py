@@ -89,7 +89,10 @@ async def test_bd_account_get_balance_returns_403_with_test_token(bd_token: str)
     resp = await bd_account_get_balance()
     assert _is_error(resp), f"expected 403 error, got {resp}"
     assert resp["status_code"] == 403
-    assert "permission" in str(resp.get("details", "")).lower() or "permission" in resp["error"].lower()
+    assert (
+        "permission" in str(resp.get("details", "")).lower()
+        or "permission" in resp["error"].lower()
+    )
 
 
 # --------------------------------------------------------------------------- #

@@ -467,7 +467,9 @@ def _render_tool_source(tool: ToolDef) -> str:
         docstring_lines.append(_one_line(tool.summary))
     elif tool.description:
         first_line = tool.description.split("\n", 1)[0].strip()
-        docstring_lines.append(first_line[:200] if first_line else f"Call {tool.method} {tool.path}.")
+        docstring_lines.append(
+            first_line[:200] if first_line else f"Call {tool.method} {tool.path}."
+        )
     else:
         docstring_lines.append(f"Call {tool.method} {tool.path}.")
 
@@ -605,9 +607,7 @@ def _render_call_body(
         params_kw = ""
 
     json_kw = (
-        "json=body"
-        if tool.has_request_body and tool.method in ("POST", "PUT", "PATCH")
-        else ""
+        "json=body" if tool.has_request_body and tool.method in ("POST", "PUT", "PATCH") else ""
     )
 
     kwargs = ", ".join(k for k in (params_kw, json_kw) if k)

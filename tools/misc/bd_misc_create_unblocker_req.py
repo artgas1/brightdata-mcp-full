@@ -20,7 +20,9 @@ WRITES = True
 
 
 @requires_write_enabled
-async def bd_misc_create_unblocker_req(zone: str, customer: str | None = None, body: dict[str, Any] | None = None) -> dict[str, Any]:
+async def bd_misc_create_unblocker_req(
+    zone: str, customer: str | None = None, body: dict[str, Any] | None = None
+) -> dict[str, Any]:
     """Call POST /unblocker/req.
 
     From: POST /unblocker/req

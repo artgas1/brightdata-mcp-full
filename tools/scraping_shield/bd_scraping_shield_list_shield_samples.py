@@ -18,7 +18,14 @@ GROUP = "scraping_shield"
 WRITES = False
 
 
-async def bd_scraping_shield_list_shield_samples(from_arg: str | None = None, to: str | None = None, cn: str | None = None, peer_cn: str | None = None, categories: str | None = None, host: str | None = None) -> dict[str, Any]:
+async def bd_scraping_shield_list_shield_samples(
+    from_arg: str | None = None,
+    to: str | None = None,
+    cn: str | None = None,
+    peer_cn: str | None = None,
+    categories: str | None = None,
+    host: str | None = None,
+) -> dict[str, Any]:
     """Returns sample requests data for the chosen classification
 
     From: GET /shield/samples

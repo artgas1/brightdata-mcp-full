@@ -18,7 +18,15 @@ GROUP = "scraping_shield"
 WRITES = False
 
 
-async def bd_scraping_shield_get_shield_zones_by_class(from_arg: str | None = None, to: str | None = None, cn: str | None = None, peer_cn: str | None = None, categories: str | None = None, order_by: str | None = None, order: str | None = None) -> dict[str, Any]:
+async def bd_scraping_shield_get_shield_zones_by_class(
+    from_arg: str | None = None,
+    to: str | None = None,
+    cn: str | None = None,
+    peer_cn: str | None = None,
+    categories: str | None = None,
+    order_by: str | None = None,
+    order: str | None = None,
+) -> dict[str, Any]:
     """Returns usage data per zone for the chosen classification
 
     From: GET /shield/zones_by_class

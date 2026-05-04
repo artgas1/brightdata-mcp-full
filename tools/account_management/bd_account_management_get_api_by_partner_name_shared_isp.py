@@ -18,7 +18,9 @@ GROUP = "account_management"
 WRITES = False
 
 
-async def bd_account_management_get_api_by_partner_name_shared_isp(partner_name: str) -> dict[str, Any]:
+async def bd_account_management_get_api_by_partner_name_shared_isp(
+    partner_name: str,
+) -> dict[str, Any]:
     """Call GET /api/{PARTNER_NAME}/shared_isp.
 
     From: GET /api/{PARTNER_NAME}/shared_isp

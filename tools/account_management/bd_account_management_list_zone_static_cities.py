@@ -18,7 +18,9 @@ GROUP = "account_management"
 WRITES = False
 
 
-async def bd_account_management_list_zone_static_cities(country: str, pool_ip_type: str | None = None) -> dict[str, Any]:
+async def bd_account_management_list_zone_static_cities(
+    country: str, pool_ip_type: str | None = None
+) -> dict[str, Any]:
     """Get list of available cities of static network per country
 
     From: GET /zone/static/cities

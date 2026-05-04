@@ -18,7 +18,16 @@ GROUP = "marketplace_dataset"
 WRITES = False
 
 
-async def bd_marketplace_dataset_list_datasets_v3_snapshots(dataset_id: str, status: str | None = None, skip: int | None = None, limit: int | None = None, from_date: str | None = None, to_date: str | None = None, with_total: bool | None = None, trigger_type: str | None = None) -> dict[str, Any]:
+async def bd_marketplace_dataset_list_datasets_v3_snapshots(
+    dataset_id: str,
+    status: str | None = None,
+    skip: int | None = None,
+    limit: int | None = None,
+    from_date: str | None = None,
+    to_date: str | None = None,
+    with_total: bool | None = None,
+    trigger_type: str | None = None,
+) -> dict[str, Any]:
     """Get a list of triggered collections, the list contains only snapshots created for a specific dataset
 
     From: GET /datasets/v3/snapshots

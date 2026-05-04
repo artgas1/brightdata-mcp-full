@@ -18,7 +18,9 @@ GROUP = "marketplace_dataset"
 WRITES = False
 
 
-async def bd_marketplace_dataset_get_datasets_v3_log_by_snapshot_id(snapshot_id: str) -> dict[str, Any]:
+async def bd_marketplace_dataset_get_datasets_v3_log_by_snapshot_id(
+    snapshot_id: str,
+) -> dict[str, Any]:
     """Retrieve the logs for a specific dataset snapshot
 
     From: GET /datasets/v3/log/{snapshot_id}

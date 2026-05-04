@@ -18,7 +18,9 @@ GROUP = "marketplace_dataset"
 WRITES = False
 
 
-async def bd_marketplace_dataset_list_datasets_snapshots(dataset_id: str | None = None, view_id: str | None = None, status: str | None = None) -> dict[str, Any]:
+async def bd_marketplace_dataset_list_datasets_snapshots(
+    dataset_id: str | None = None, view_id: str | None = None, status: str | None = None
+) -> dict[str, Any]:
     """Get dataset snapshots metadata
 
     From: GET /datasets/snapshots

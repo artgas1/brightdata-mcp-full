@@ -18,7 +18,9 @@ GROUP = "scraper_studio"
 WRITES = False
 
 
-async def bd_scraper_studio_get_dca_collectors_by_collector_id_automate_template_progress(collector_id: str) -> dict[str, Any]:
+async def bd_scraper_studio_get_dca_collectors_by_collector_id_automate_template_progress(
+    collector_id: str,
+) -> dict[str, Any]:
     """Get AI Job Progress
 
     From: GET /dca/collectors/{collector_id}/automate_template/progress

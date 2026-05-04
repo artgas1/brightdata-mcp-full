@@ -18,7 +18,9 @@ GROUP = "marketplace_dataset"
 WRITES = False
 
 
-async def bd_marketplace_dataset_get_datasets_views_by_view_id_delivery_settings(view_id: str) -> dict[str, Any]:
+async def bd_marketplace_dataset_get_datasets_views_by_view_id_delivery_settings(
+    view_id: str,
+) -> dict[str, Any]:
     """Retrieves the current delivery configuration for a specific dataset view.
 
     From: GET /datasets/views/{view_id}/delivery_settings

@@ -18,7 +18,9 @@ GROUP = "account_management"
 WRITES = False
 
 
-async def bd_account_management_list_zone_count_available_ips(zone: str | None = None, plan: dict[str, Any] | None = None) -> dict[str, Any]:
+async def bd_account_management_list_zone_count_available_ips(
+    zone: str | None = None, plan: dict[str, Any] | None = None
+) -> dict[str, Any]:
     """Call GET /zone/count_available_ips.
 
     From: GET /zone/count_available_ips

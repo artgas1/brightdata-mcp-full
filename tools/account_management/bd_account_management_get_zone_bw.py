@@ -18,7 +18,9 @@ GROUP = "account_management"
 WRITES = False
 
 
-async def bd_account_management_get_zone_bw(zone: str, from_arg: str | None = None, to: str | None = None) -> dict[str, Any]:
+async def bd_account_management_get_zone_bw(
+    zone: str, from_arg: str | None = None, to: str | None = None
+) -> dict[str, Any]:
     """Get the bandwidth stats for a Zone
 
     From: GET /zone/bw

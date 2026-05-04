@@ -18,7 +18,9 @@ GROUP = "deep_lookup"
 WRITES = False
 
 
-async def bd_deep_lookup_get_request_by_id_download(id: str, format: str | None = None) -> dict[str, Any]:
+async def bd_deep_lookup_get_request_by_id_download(
+    id: str, format: str | None = None
+) -> dict[str, Any]:
     """Download Results
 
     Export results in JSON, CSV, or Excel.

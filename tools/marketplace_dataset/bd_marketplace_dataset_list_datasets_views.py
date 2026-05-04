@@ -19,7 +19,7 @@ WRITES = False
 
 
 async def bd_marketplace_dataset_list_datasets_views() -> dict[str, Any]:
-    """Retrieves the customer's dataset views. A dataset view represents a saved filtered subscription to a dataset that can be delivered on a schedule. Use the returned `id` with the view delivery settings 
+    """Retrieves the customer's dataset views. A dataset view represents a saved filtered subscription to a dataset that can be delivered on a schedule. Use the returned `id` with the view delivery settings
 
     Retrieves the customer's dataset views. A dataset view represents a saved filtered
     subscription to a dataset that can be delivered on a schedule. Use the returned `id`

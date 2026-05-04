@@ -20,7 +20,9 @@ WRITES = True
 
 
 @requires_write_enabled
-async def bd_account_management_create_zone_ips_refresh(body: dict[str, Any] | None = None) -> dict[str, Any]:
+async def bd_account_management_create_zone_ips_refresh(
+    body: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     """Call POST /zone/ips/refresh.
 
     From: POST /zone/ips/refresh

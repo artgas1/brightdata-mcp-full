@@ -18,7 +18,24 @@ GROUP = "proxy"
 WRITES = False
 
 
-async def bd_proxy_get_request(zone: str, url: str, format: str, method: str | None = None, country: str | None = None, city: str | None = None, zip: str | None = None, asn: str | None = None, carrier: str | None = None, os: str | None = None, dns: str | None = None, session: str | None = None, ip: str | None = None, gip: str | None = None, c_tag: str | None = None, direct: bool | None = None) -> dict[str, Any]:
+async def bd_proxy_get_request(
+    zone: str,
+    url: str,
+    format: str,
+    method: str | None = None,
+    country: str | None = None,
+    city: str | None = None,
+    zip: str | None = None,
+    asn: str | None = None,
+    carrier: str | None = None,
+    os: str | None = None,
+    dns: str | None = None,
+    session: str | None = None,
+    ip: str | None = None,
+    gip: str | None = None,
+    c_tag: str | None = None,
+    direct: bool | None = None,
+) -> dict[str, Any]:
     """Call GET /request.
 
     From: GET /request

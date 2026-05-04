@@ -18,7 +18,9 @@ GROUP = "marketplace_dataset"
 WRITES = False
 
 
-async def bd_marketplace_dataset_get_datasets_snapshots_by_id_parts(id: str, format: str | None = None, compress: bool | None = None, batch_size: int | None = None) -> dict[str, Any]:
+async def bd_marketplace_dataset_get_datasets_snapshots_by_id_parts(
+    id: str, format: str | None = None, compress: bool | None = None, batch_size: int | None = None
+) -> dict[str, Any]:
     """Get dataset snapshot delivery parts. All query parameters used here need to match those used when downloading the snapshot to get accurate parts
 
     From: GET /datasets/snapshots/{id}/parts
