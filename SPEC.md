@@ -1,10 +1,11 @@
 ---
-title: "SPEC: brightdata-mcp-full — comprehensive 350-tool MCP server"
+title: "SPEC: brightdata-mcp-full — comprehensive MCP server for Bright Data REST API"
 type: "spec"
-status: "in-progress"
+status: "implemented"
 linear_issue: "INFRA-160"
 owner: "@artgas1"
-last_updated: "2026-05-01"
+last_updated: "2026-05-04"
+released_version: "0.1.0"
 license: "MIT"
 tags: ["mcp", "brightdata", "auto-generated", "multi-agent"]
 ---
@@ -435,3 +436,40 @@ Phase 3 в существующем Linear project «Миграция proxy: Spa
 - **v1.1** is now positioned as hand-wraps for popular per-platform scrapers (community-driven, not from OpenAPI). Original spec assumed these were auto-generatable; reality is they need bespoke wrappers because BD doesn't ship per-platform OpenAPI specs.
 - **Acceptance Criteria** count assertions (`44 account tools`, `91 tools across 3 groups`, etc.) need to be updated to reflect actual numbers (`70`, `85` respectively) — see follow-up edit if AC is consumed by automation.
 - **Reality-checked README** and per-group docs ship in the A4 docs PR (this section).
+
+## Release Note — v0.1.0 (2026-05-04)
+
+**Status:** released. Initial public version on PyPI under MIT license.
+
+### What shipped (final)
+
+- **149 auto-generated MCP tools** across **15 product groups** (account_management default, 14 others on demand via `GROUPS=` env var).
+- **Code-generation pipeline** (`lib/codegen.py` + `scripts/regenerate.py`): OpenAPI specs → FastMCP wrappers, smoke-tools preserved via marker comment.
+- **3 hand-written smoke tools** with rich BD-specific docstrings (`bd_account_get_status`, `bd_account_get_balance`, `bd_zones_list`).
+- **Write-gate** (`BD_ENABLE_WRITES`, default `false`) gates all mutating endpoints.
+- **HTTP client** with bearer auth, exponential-backoff retry (`tenacity`), structured error envelope.
+- **28 unit tests + 82 integration tests** (`pytest`).
+- **CI** via GitHub Actions (lint, format, typecheck, unit tests on every PR/push).
+- **Trusted Publisher** workflow for PyPI on `v*` tags (no API tokens in repo secrets).
+- **Documentation:** `README.md`, `docs/groups.md` (auto), `docs/auth.md`, `docs/examples.md`, `docs/troubleshooting.md`, `CHANGELOG.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`.
+
+### Wiring confirmed live
+
+- **NeiroOwl `.mcp.json` template** (in [`CheekyExplosion/NeiroOwl-claude`](https://github.com/CheekyExplosion/NeiroOwl-claude/blob/main/.mcp.json)) registers `brightdata-full` with portable defaults, no hardcoded user-paths.
+- **End-to-end smoke** against live BD API (2026-05-04 11:24 UTC):
+  - `bd_account_get_status` → `status: active`, customer ID present.
+  - `bd_account_management_list_zone_get_active_zones` → 2 active zones returned.
+- INFRA-160…166 closed (Done / Deployed). Linear project Phase 3 complete.
+
+### Known follow-ups (post-release, optional)
+
+- **v1.1**: hand-wraps for popular per-platform scrapers (Amazon, LinkedIn, Twitter — BD doesn't ship per-platform OpenAPI specs, so these need bespoke implementations).
+- **v1.2**: caching layer for read-heavy endpoints (zone lists, status, country lists) — reduces round-trips when used in long sessions.
+- **v1.3**: HTTP/SSE transport in addition to stdio (for hosted-MCP scenarios).
+
+### Cross-references
+
+- **PyPI**: <https://pypi.org/project/brightdata-mcp-full/> (live after first `v*` tag push)
+- **GitHub release**: <https://github.com/artgas1/brightdata-mcp-full/releases>
+- **NeiroOwl `.mcp.json`**: [`CheekyExplosion/NeiroOwl-claude/.mcp.json`](https://github.com/CheekyExplosion/NeiroOwl-claude/blob/main/.mcp.json)
+- **Linear project**: [Миграция proxy: SpaceProxy → Bright Data](https://linear.app/neirosova/project/migraciya-proxy-spaceproxy-bright-data-087da7e9b0a9)
