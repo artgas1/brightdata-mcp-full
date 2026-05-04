@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] — 2026-05-04
+
+### Fixed
+
+- Console script `brightdata-mcp-full` failed with `ModuleNotFoundError: No
+  module named 'server'` after `pip install` / `uvx`. Root cause: `server.py`
+  lives at the repo root (not inside a package), and the wheel's
+  `[tool.hatch.build.targets.wheel] packages = ["lib", "tools"]` pulled in
+  the packages but skipped top-level modules. Added `force-include` for
+  `server.py` so the entry point resolves.
+
 ## [0.1.0] — 2026-05-04
 
 Initial release. Comprehensive Python MCP server complementing Bright Data's
